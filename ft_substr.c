@@ -27,7 +27,7 @@ int main(void)
   char src[] = "substr funcao implementacao";
   int m = 7;
   int n = 12;
-  
+
   char *dest = ft_substr(src, m, n);
   printf("%s\n", dest);
   return (0);
