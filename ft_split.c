@@ -1,62 +1,99 @@
 #include "libft.h"
 
-size_t	get_words(char const *s, char c)
+static size_t	count_words(const char *s, char c)
 {
-	size_t	i;
+	size_t i;
+	size_t j;
 
 	i = 0;
-	while (*s != '\0')
+	j = 0;
+	while (s[j] != '\0')
 	{
-		if (*s == c)
-			s++;
-		else
+		if (s[j] != c)
 		{
 			i++;
-			while (*s != '\0' && *s != c)
-				s++;
+			while (s[j] && s[j] != c)
+				j++;
 		}
+		else
+			j++;
 	}
 	return (i);
 }
-
-char	**free_m(char **s, size_t idx)
+static size_t	word_len(const char *s, char c)
 {
-	while (s[idx] != NULL && idx >= 0)
-	{
-		free(s[idx]);
-		s[idx] = NULL;
-		idx--;
-	}
-	free(s);
-	s = NULL;
-	return (NULL);
+    size_t i;
+
+	i = 0;
+    while (s[i] && s[i] != c)
+        i++;
+    return (i);
 }
 
-char	**ft_split(char const *s, char c)
+static void ft_split_free(char **arr, int f)
 {
-	size_t	i;
-	size_t	len;
-	size_t	wc;
-	char	**arr;
-
-	if (!s || !(arr = (char **)malloc(sizeof(char *) * (get_words(s, c) + 1))))
-		return (NULL);;
-	wc = get_words(s, c);
-	i = 0;
-	while (*s)
+	while (arr[f])
 	{
-		if (*s == c)
-			s++;
-		else
+		free(arr[f]);
+		f++;
+	}
+	free(arr);
+}
+
+char **ft_split(const char *s, char c)
+{
+	char **arr;
+	size_t wordl;
+	size_t i;
+	size_t j;
+	size_t k;
+
+	i = 0;
+	j = 0;
+	arr = (char **)malloc((count_words(s, c) + 1) * sizeof(*arr));
+	if (!arr)
+		return (NULL);
+	while (s[i] != '\0')
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		if (s[i] != '\0')
 		{
-			len = 0;
-			while(*(s + len) && *(s + len) != c)
-				len++;
-			if (i < wc && !(arr[i] = ft_substr(s, 0, len)))
-				return (free_m(arr, i));
-			s += len;
+			wordl = word_len(s + i, c);
+			arr[j] = (char *)malloc((wordl + 1) * sizeof(char));
+			if (arr[j] == NULL)
+				return (NULL);
+			k = 0;
+			while (k < wordl)
+			{
+				arr[j][k] = s[i];
+				k++;
+				i++;
+			}
+			arr[j][wordl] = '\0';
+			j++;
 		}
 	}
-	arr[i] = 0;
+	arr[j] = NULL;
 	return (arr);
 }
+
+/*
+int main(void)
+{
+	char *s = "ola+como+vai";
+	char c = '+';
+	char **array;
+	int i = 0;
+	int f = 0;
+
+	array = ft_split(s, c);
+	while (array[i])
+	{
+		printf("%s\n",array[i]);
+		i++;
+	}
+	ft_split_free(array, f);
+	return (0);
+}
+*/
