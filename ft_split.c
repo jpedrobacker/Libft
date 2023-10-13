@@ -61,17 +61,12 @@ char **ft_split(const char *s, char c)
 		{
 			wordl = word_len(s + i, c);
 			arr[j] = (char *)malloc((wordl + 1) * sizeof(char));
-			if (arr[j] == NULL)
+			if (!arr[j])
 				return (NULL);
 			k = 0;
 			while (k < wordl)
-			{
-				arr[j][k] = s[i];
-				k++;
-				i++;
-			}
-			arr[j][wordl] = '\0';
-			j++;
+				arr[j][k++] = s[i++];
+			arr[j++][wordl] = '\0';
 		}
 	}
 	arr[j] = NULL;
