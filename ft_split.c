@@ -22,12 +22,12 @@ static size_t	count_words(const char *s, char c)
 }
 static size_t	word_len(const char *s, char c)
 {
-    size_t i;
+	size_t i;
 
 	i = 0;
-    while (s[i] && s[i] != c)
-        i++;
-    return (i);
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
 }
 
 static void ft_split_free(char **arr, int f)
@@ -50,8 +50,7 @@ char **ft_split(const char *s, char c)
 
 	i = 0;
 	j = 0;
-	arr = (char **)malloc((count_words(s, c) + 1) * sizeof(*arr));
-	if (!arr)
+	if (!(arr = (char **)malloc((count_words(s, c) + 1) * sizeof(*arr))))
 		return (NULL);
 	while (s[i] != '\0')
 	{
@@ -60,8 +59,7 @@ char **ft_split(const char *s, char c)
 		if (s[i] != '\0')
 		{
 			wordl = word_len(s + i, c);
-			arr[j] = (char *)malloc((wordl + 1) * sizeof(char));
-			if (!arr[j])
+			if (!(arr[j] = (char *)malloc((wordl + 1) * sizeof(char))))
 				return (NULL);
 			k = 0;
 			while (k < wordl)
