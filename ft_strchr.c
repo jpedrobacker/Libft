@@ -15,13 +15,13 @@ char *ft_strchr(const char *str, int c)
         return (stri + i);
       i++;
     }
-  return (stri);
+  return (0);
 }
 
 /*
 int main(void)
 {
   char *str = "sdhahsduha.joao";
-  printf("%s", ft_strchr(str, '.'));  
+  printf("%s", ft_strchr(str, '.'));
 }
 */
