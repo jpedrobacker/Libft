@@ -2,7 +2,6 @@
 
 int ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	int				res;
 	size_t  i;
 
 	i = 0;
@@ -17,7 +16,7 @@ int ft_strncmp(const char *str1, const char *str2, size_t n)
 	{
 		return (0);
 	}
-	return (res = str1[i] - str2[i]);
+	return (str1[i] - str2[i]);
 }
 
 /*
