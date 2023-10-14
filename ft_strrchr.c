@@ -3,6 +3,7 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	int	i;
+	int	j;
 	char	*stri;
 
 	i = 0;
@@ -12,16 +13,19 @@ char	*ft_strrchr(const char *str, int c)
 	while(str[i] != '\0')
 	{
 		if (stri[i] == c)
-			return(stri + i);
+			j = i;
 		i++;
 	}
-	return (0);
+	if (stri[j] != c)
+		return (0);
+	else
+		return (stri + j);
 }
 
 /*
 int main(void)
 {
-  char *str = "sdhahsduha.joao";
-  printf("%s", ft_strrchr(str, '='));
+  char *str = "sd.ha.hsduha.joao";
+  printf("%s", ft_strrchr(str, '.'));
 }
 */
