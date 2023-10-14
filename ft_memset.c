@@ -1,22 +1,25 @@
 #include "libft.h"
 
-void	*ft_memset(char *str, int a, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
+	unsigned char	*s;
 
 	i = 0;
-	while (i < n)
+	s = (unsigned char *)b;
+	while (i < len)
 	{
-		str[i] = a;
-		i++;
+		s[i++] = (unsigned char)c;
 	}
+	return (s);
 }
 
 /*
 int main(void)
 {
-	char *str = "olha essa string com isso aqui";
-	ft_memset(str, '&', 4);
-	printf("%s", str);
+	char str[50];
+	strcpy(str, "com isso daqui completa com isso");
+	ft_memset(str, '$', 5);
+	ft_putstr_fd(str, 1);
 }
 */
