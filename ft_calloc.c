@@ -2,19 +2,13 @@
 
 void	*ft_calloc(size_t nitems, size_t size)
 {
-	size_t	j;
-	int	*i;
+	void	*i;
+	size_t	s;
 
-	if (nitems == 0 || size == 0)
-	{
-		nitems = 1;
-		size = 1;
-	}
-	j = nitems * size;
-	if (!(i = malloc(j)))
+	s = nitems * size;
+	if (!(i = malloc(s)))
 		return (NULL);
-	else
-		ft_bzero(i, j);
+	ft_bzero(i, s);
 	return (i);
 }
 
@@ -22,7 +16,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 int main(void)
 {
 	int i = 0;
-	int n = 0;
+	int n = 5;
 	int *ptr = (int *)ft_calloc(n, sizeof(int));
 
 	while (i < n)
@@ -33,7 +27,7 @@ int main(void)
 	i = 0;
 	while (i < n)
 	{
-		printf("%d, ", ptr[i]);
+		printf("%d, ", ptr[i++]);
 	}
 }
 */
