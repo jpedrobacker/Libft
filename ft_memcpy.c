@@ -14,13 +14,14 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 		cdst[i] = csrc[i];
 		i++;
 	}
+	return (cdst);
 }
 
 /*
 int main (void)
 {
 	char *src = "copia essa string";
-	char *dst;
+	char dst[40];
 
 	ft_memcpy(dst, src, strlen(src) + 1);
 	printf("%s", dst);
