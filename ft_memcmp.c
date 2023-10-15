@@ -12,7 +12,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	while (i < n)
 	{
 		if (istr1[i] < istr2[i] || istr1[i] > istr2[i])
-			return (istr1[i] - istr2[i]);
+			return ((unsigned char)istr1[i] - (unsigned char)istr2[i]);
 		i++;
 	}
 	return (0);
