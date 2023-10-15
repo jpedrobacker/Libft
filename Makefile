@@ -29,7 +29,8 @@ SRCS		=	ft_atoi.c \
 				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c \
-				ft_itoa.c
+				ft_itoa.c \
+				ft_strmapi.c 
 
 OBJ			=	$(SRCS:.c=.o)
 CC			=	gcc
