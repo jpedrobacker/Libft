@@ -12,12 +12,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	else if (size < ft_strlen(dst))
 		return (ft_strlen(src) + size);
 	else
+	{
 		while (dst[i] != '\0')
 			i++;
 		while (src[j] != '\0' && j < size)
 			dst[i++] = src[j++];
 		dst[i] = '\0';
 		return (i);
+	}
 }
 
 /*
