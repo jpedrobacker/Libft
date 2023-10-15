@@ -17,9 +17,9 @@ void *ft_memchr(const void *str, int c, size_t n)
 /*
 int main(void)
 {
-  char *str = "sdhahsduha.joao";
-  char *stri;
-  stri = ft_memchr(str, '.', 50);
-  printf("%s", stri);
+	char *str = "sdhahsduha.joao";
+	char *stri;
+	stri = ft_memchr(str, '.', 50);
+	printf("%s", stri);
 }
 */
