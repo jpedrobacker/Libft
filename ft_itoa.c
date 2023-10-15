@@ -42,8 +42,9 @@ char	*ft_itoa(int n)
 	}
 	return (s);
 }
-
+/*
 int main(void)
 {
 	printf("%s", ft_itoa(23));
 }
+*/
