@@ -30,7 +30,7 @@ static size_t	word_len(const char *s, char c)
 	return (i);
 }
 
-static void ft_split_free(char **arr, int f)
+static void	ft_split_free(char **arr, int f)
 {
 	while (arr[f])
 	{
@@ -40,7 +40,7 @@ static void ft_split_free(char **arr, int f)
 	free(arr);
 }
 
-char **ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char **arr;
 	size_t wordl;
