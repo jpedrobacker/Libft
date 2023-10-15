@@ -1,7 +1,7 @@
 SRCS		=	ft_atoi.c \
 				ft_bzero.c \
 				ft_calloc.c \
-				ft_isallnum.c \
+				ft_isalnum.c \
 				ft_isalpha.c \
 				ft_isascii.c \
 				ft_isdigit.c \
@@ -24,13 +24,13 @@ SRCS		=	ft_atoi.c \
 				ft_strlen.c \
 				ft_strncmp.c \
 				ft_strnstr.c \
-				ft_strrchar.c \
+				ft_strrchr.c \
 				ft_strtrim.c \
 				ft_substr.c \
 				ft_tolower.c \
 				ft_toupper.c
 
-OBJ			=	$(SRC:.c=.o)
+OBJ			=	$(SRCS:.c=.o)
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 HDRS		=	libft.h
@@ -44,7 +44,7 @@ $(NAME):
 		ranlib $(NAME)
 
 clean:
-		rm -f $(OBJS)
+		rm -f $(OBJ)
 
 fclean:
 		clean
