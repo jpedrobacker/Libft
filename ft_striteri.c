@@ -14,6 +14,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
+/*
 void func(unsigned int i, char *str)
 {
 	printf("%d, %s\n", i, str);
@@ -27,3 +28,4 @@ int main(void)
 	printf("%s\n", str);
 	return (0);
 }
+*/
