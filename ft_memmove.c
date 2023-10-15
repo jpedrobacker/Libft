@@ -15,13 +15,14 @@ void	*ft_memmove(void *str1, const void *str2, size_t n)
 		dstr1[i] = dstr2[i];
 		i++;
 	}
+	return (dstr1);
 }
 
 /*
 int main(void)
 {
-	char *dst = "ola";
-	const char *src = " como esta";
+	char dst[100] = "ola";
+	const char src[100] = " como esta";
 
 	printf("Antes memmove dest = %s, src = %s\n", dst, src);
 	ft_memmove(dst, src, 4);
