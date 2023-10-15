@@ -30,29 +30,24 @@ SRCS		=	ft_atoi.c \
 				ft_tolower.c \
 				ft_toupper.c
 
-OBJ_NAME	=	$(SRC_NAME:.c=.o)
-SRC			=	$(addprefix $(SRC_PATH), $(SRC_NAME))
-HEADER		=	./includes/
+OBJ			=	$(SRC:.c=.o)
+CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
+HDRS		=	libft.h
 NAME 		=	libft.a
 
-all:	$(NAME)
+all: $(NAME)
 
 $(NAME):
-	@tput setaf 2
-	gcc -c $(CFLAGS) $(SRC) -I$(HEADER)
-	ar rc $(NAME) $(OBJ_NAME)
-	ranlib $(NAME)
-	@tput sgr0
+		$(CC) -c $(CFLAGS) -I $(HDRS) $(SRCS)
+		ar cr $(NAME) $(OBJ)
+		ranlib $(NAME)
 
 clean:
-	@tput setaf 1
-	rm -rf $(OBJ_NAME)
-	@tput sgr0
+		rm -f $(OBJS)
 
-fclean:	clean
-	@tput setaf 1
-	rm -f $(NAME)
-	@tput sgr0
+fclean:
+		clean
+		rm -f $(NAME)
 
 re: fclean all
