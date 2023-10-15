@@ -9,13 +9,13 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	if (c == 0)
 		return (stri + i);
-		while (stri[i] != '\0')
-		{
-			if (str[i] == c)
-				return (stri + i);
-			i++;
-		}
-		return (0);
+	while (stri[i] != '\0')
+	{
+		if (str[i] == c)
+			return (stri + i);
+		i++;
+	}
+	return (0);
 }
 
 /*
