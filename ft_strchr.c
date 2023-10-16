@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:50 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:38:51 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:17:25 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	i;
+	int		i;
 	char	*stri;
 
 	stri = (char *)str;

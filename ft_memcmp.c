@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:18 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:38:19 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:13:22 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	size_t i;
-	char *istr1;
-	char *istr2;
+	size_t	i;
+	char	*istr1;
+	char	*istr2;
 
 	istr1 = (char *)str1;
 	istr2 = (char *)str2;

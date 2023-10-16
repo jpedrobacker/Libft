@@ -6,10 +6,9 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:37:45 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:37:46 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:09:48 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -19,9 +18,11 @@ void	*ft_calloc(size_t nitems, size_t size)
 	size_t	s;
 
 	s = nitems * size;
-	if (!(i = malloc(s)))
+	i = malloc(s);
+	if (!i)
 		return (NULL);
-	ft_bzero(i, s);
+	else
+		ft_bzero(i, s);
 	return (i);
 }
 

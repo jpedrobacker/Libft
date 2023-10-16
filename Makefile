@@ -42,7 +42,7 @@ all: $(NAME)
 
 $(NAME):
 		$(CC) -c $(CFLAGS) $(SRCS)
-		ar -cr $(NAME) $(OBJ)
+		ar -rcs $(NAME) $(OBJ)
 		ranlib $(NAME)
 
 clean:
@@ -51,5 +51,4 @@ clean:
 fclean:	clean
 		rm -f $(NAME)
 
-re:	fclean
-	all
+re:	fclean all
