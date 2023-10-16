@@ -1,6 +1,6 @@
 #include "libft.h"
 
-char *ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
 	int		j;
 	char	*dst;
@@ -23,7 +23,7 @@ int main(void)
 {
 	char    *str;
 	char    *alc;
-	
+
 	str = "copia essa string";
 	alc = ft_strdup(str);
 	printf("original: %s\ncopia: %s", str, alc);
