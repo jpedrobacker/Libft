@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/16 12:36:35 by jbergfel          #+#    #+#             */
+/*   Updated: 2023/10/16 13:48:32 by jbergfel         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	count_words(const char *s, char c)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
@@ -20,9 +32,10 @@ static size_t	count_words(const char *s, char c)
 	}
 	return (i);
 }
+
 static size_t	word_len(const char *s, char c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] && s[i] != c)
@@ -40,18 +53,15 @@ static size_t	word_len(const char *s, char c)
 	free(arr);
 }*/
 
-char	**ft_split(const char *s, char c)
+char	**split(const char *s, char c, char **arr)
 {
-	char **arr;
-	size_t wordl;
-	size_t i;
-	size_t j;
-	size_t k;
+	size_t	wordl;
+	size_t	i;
+	size_t	j;
+	size_t	k;
 
 	i = 0;
 	j = 0;
-	if (!(arr = (char **)malloc((count_words(s, c) + 1) * sizeof(*arr))))
-		return (NULL);
 	while (s[i] != '\0')
 	{
 		while (s[i] && s[i] == c)
@@ -59,8 +69,7 @@ char	**ft_split(const char *s, char c)
 		if (s[i] != '\0')
 		{
 			wordl = word_len(s + i, c);
-			if (!(arr[j] = (char *)malloc((wordl + 1) * sizeof(char))))
-				return (NULL);
+			arr[j] = (char *)malloc((wordl + 1) * sizeof(char));
 			k = 0;
 			while (k < wordl)
 				arr[j][k++] = s[i++];
@@ -68,6 +77,17 @@ char	**ft_split(const char *s, char c)
 		}
 	}
 	arr[j] = NULL;
+	return (arr);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**arr;
+
+	arr = (char **)malloc((count_words(s, c) + 1) * sizeof(*arr));
+	if (!arr)
+		return (NULL);
+	split(s, c, arr);
 	return (arr);
 }
 
