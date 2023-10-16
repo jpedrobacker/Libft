@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:23 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:39:24 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:26:43 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ char	*ft_substr(const char *src, unsigned int start, size_t len)
 	size_t	j;
 	char	*dst;
 
-	if (!(dst = (char *)malloc(sizeof(*src) * (len + 1))))
+	dst = (char *)malloc(sizeof(*src) * (len + 1));
+	if (!dst)
 		return (NULL);
 	i = 0;
 	j = 0;

@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:56 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:38:57 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:30:14 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	if (!s || !f)
 		return ;
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		f(i, s + i);
 		i++;

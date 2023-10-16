@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:20 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:39:21 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:28:12 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_char_is_true(char c, char const *set)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (set[i])
@@ -26,9 +26,9 @@ static int	ft_char_is_true(char c, char const *set)
 	return (0);
 }
 
-static size_t ft_start_str(char const *s1, char const *set)
+static size_t	ft_start_str(char const *s1, char const *set)
 {
-	size_t start;
+	size_t	start;
 
 	start = 0;
 	while (s1[start] && ft_char_is_true(s1[start], set))
@@ -36,9 +36,9 @@ static size_t ft_start_str(char const *s1, char const *set)
 	return (start);
 }
 
-static size_t ft_end_str(char const *s1, char const *set, size_t start)
+static size_t	ft_end_str(char const *s1, char const *set, size_t start)
 {
-	size_t end;
+	size_t	end;
 
 	end = ft_strlen(s1);
 	while (end > start && ft_char_is_true(s1[end - 1], set))

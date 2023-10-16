@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:37:21 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:37:22 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/16 12:29:34 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,10 @@ static size_t	nstr_size(int n)
 char	*ft_itoa(int n)
 {
 	char	*s;
-	int	i;
+	int		i;
 
-	if (!(s = malloc(sizeof(*s) * (nstr_size(n) + 1))))
+	s = malloc(sizeof(*s) * (nstr_size(n) + 1));
+	if (!s)
 		return (NULL);
 	if (!n)
 		s[0] = '0';
