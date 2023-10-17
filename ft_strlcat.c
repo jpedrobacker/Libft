@@ -15,31 +15,32 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	j;
-	size_t	h;
+	size_t	dstlen;
+	size_t	srclen;
 
-	i = ft_strlen(src);
-	j = 0;
-	while (j < size && dst[j])
-		j++;
-	h = j;
-	while (src[j - h] && (j + 1) < size)
+	i = 0;
+	dstlen = ft_strlen(dst);
+	srclen = ft_strlen(src);
+	if (!size)
+		return (srclen);
+	while (src[i] && dstlen + i < size - 1)
 	{
-		dst[j] = src[j - h];
-		j++;
+		dst[dstlen + i] = src[i];
+		i++;
 	}
-	if (h < size)
-		dst[j] = '\0';
-	return (h + i);
+	dst[dstlen + i] = '\0';
+	if (dstlen > size)
+		return (srclen + size);
+	return (srclen + dstlen);
 }
 
-
+/*
 int main(void)
 {
-	char dst[100] = "junta essa string";
-	char src[100] = " com essa outra string";
+	char dst[30] = "123";
+	char src[30] = "456";
 
-	ft_strlcat(dst, src, ft_strlen(src));
-	printf("%s",dst);
+	ft_strlcat(dst, src, 10);
+	printf("%d",ft_strlcat(dst, src, ft_strlen(src)));
 }
-
+*/
