@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:04 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:39:05 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/17 11:13:17 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,30 +15,25 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	j = 0;
-	while (src[i] != '\0')
+	if (size < 1)
+		return (ft_strlen(src));
+	while (src[i] && i < size - 1)
 	{
-		if (size && (i < (size - 1)))
-		{
-			dst[i] = src[i];
-			j++;
-		}
+		dst[i] = src[i];
 		i++;
 	}
-	dst[j] = '\0';
-	return (i);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
 
 /*
 int main(void)
 {
-  char src[] = "Ola";
+  char src[] = "Ola como vai você";
   char dest[100];
 
-  printf("%d\n",ft_strlcpy(dest, src, 4));
-  printf("%s", dest);
+  printf("%ld\n",ft_strlcpy(dest, src, 4));
 }
 */
