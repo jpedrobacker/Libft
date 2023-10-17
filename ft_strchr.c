@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:50 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 12:17:25 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/17 13:35:53 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,19 @@ char	*ft_strchr(const char *str, int c)
 
 	stri = (char *)str;
 	i = 0;
-	if (c == 0)
-		return (stri + i);
-	while (stri[i] != '\0')
+	while (stri[i] != c)
 	{
-		if (str[i] == c)
-			return (stri + i);
+		if (stri[i] == '\0')
+			return (0);
 		i++;
 	}
-	return (0);
+	return (stri + i);
 }
 
 /*
 int main (void)
 {
 	char *str = "sdhahsduha.joao";
-	printf("%s", ft_strchr(str, '+'));
+	printf("%s", ft_strchr(str, '\0'));
 }
 */
