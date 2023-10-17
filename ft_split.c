@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:36:35 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/17 15:33:26 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/17 17:22:28 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,10 @@ char	**ft_split(const char *s, char c)
 /*
 int main(void)
 {
-	char *s = "ola+como+vai";
+	char *s = "o+o+a";
 	char c = '+';
 	char **array;
 	int i = 0;
-	int f = 0;
 
 	array = ft_split(s, c);
 	while (array[i])
@@ -111,7 +110,8 @@ int main(void)
 		printf("%s\n",array[i]);
 		i++;
 	}
-	ft_split_free(array, f);
+	ft_split_free(array);
+	free(array);
 	return (0);
 }
 */
