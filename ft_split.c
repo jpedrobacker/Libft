@@ -56,7 +56,7 @@ static void	ft_split_free(char **arr)
 	free(arr);
 }
 
-char	**split(const char *s, char c, char **arr)
+static char	**split(const char *s, char c, char **arr)
 {
 	size_t	wordl;
 	size_t	i;
