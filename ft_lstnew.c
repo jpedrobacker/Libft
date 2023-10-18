@@ -7,14 +7,16 @@ t_list	*ft_lstnew(void *content)
 	new = (t_list *)malloc(sizeof(t_list));
 	if (!new)
 		return (NULL);
-		new->content = content;
-		new->next = NULL;
-		return (new);
+	new->content = content;
+	new->next = NULL;
+	return (new);
 }
 
+/*
 int main(void)
 {
 	printf("%s\n", ft_lstnew("Hello")->content);
 
 	return(0);
 }
+*/
