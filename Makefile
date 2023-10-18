@@ -33,7 +33,18 @@ SRCS		=	ft_atoi.c \
 				ft_tolower.c \
 				ft_toupper.c \
 
+SRCS_BONUS =	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c
+
 OBJ			=	$(SRCS:.c=.o)
+BNSOBJ		=	$(BNSRCS:.c=.o)
 CC			=	gcc
 CFLAGS		=	-Wall -Wextra -Werror
 NAME 		=	libft.a
@@ -42,6 +53,11 @@ all: $(NAME)
 
 $(NAME):
 		$(CC) -c $(CFLAGS) $(SRCS)
+		ar -rcs $(NAME) $(OBJ)
+		ranlib $(NAME)
+
+bonus:
+		$(CC) -c $(CFLAGS) $(SRCS_BONUS)
 		ar -rcs $(NAME) $(OBJ)
 		ranlib $(NAME)
 
