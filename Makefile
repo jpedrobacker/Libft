@@ -44,7 +44,7 @@ SRCS_BONUS =	ft_lstnew.c \
 				ft_lstmap.c
 
 OBJ			=	$(SRCS:.c=.o)
-BNSOBJ		=	$(BNSRCS:.c=.o)
+BNSOBJ		=	$(SRCS_BONUS:.c=.o)
 CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 NAME 		=	libft.a

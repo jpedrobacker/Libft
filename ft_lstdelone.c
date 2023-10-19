@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 12:05:53 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/19 14:15:17 by jbergfel         ###   ########.fr       */
+/*   Created: 2023/10/19 12:07:33 by jbergfel          #+#    #+#             */
+/*   Updated: 2023/10/19 13:34:15 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*temp;
-
-	if (lst != NULL)
-	{
-		if (*lst == NULL)
-			*lst = new;
-		else
-		{
-			temp = ft_lstlast(*(lst));
-			temp->next = new;
-		}
-	}
+	del(lst->content);
+	free(lst);
+	lst = NULL;
 }
 
 /*
+void	ft_del(void *content)
+{
+	*(int*)content = 0;
+}
+
 int main(void)
 {
-	int		tab[20];
+		int		tab[20];
 	int		i;
 	t_list	*begin;
 
@@ -66,6 +62,17 @@ int main(void)
 	}
 	tmp = begin;
 	printf("Should print numbers from 9 to -9 :\n");
+	while (tmp)
+	{
+		printf("%i ", *((int*)tmp->content));
+		tmp = tmp->next;
+	}
+
+	printf("\n\n=========== TESTING LSTDELONE  ============\n\n");
+	tmp = begin->next;
+	ft_lstdelone(begin, ft_del);
+	begin = tmp;
+	printf("Should print numbers from 8 to -9 :\n");
 	while (tmp)
 	{
 		printf("%i ", *((int*)tmp->content));

@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:36:35 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/17 17:22:28 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/19 13:13:37 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ char	**ft_split(const char *s, char c)
 {
 	char	**arr;
 
+	if (!s)
+		return (0);
 	arr = (char **)malloc((count_words(s, c) + 1) * sizeof(*arr));
 	if (!arr)
 		return (NULL);
