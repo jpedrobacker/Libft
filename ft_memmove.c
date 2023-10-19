@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:24 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 19:23:25 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/19 18:15:13 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*dest;
 	unsigned char	*dsrc;
 
+	if (!dst && !src)
+		return (NULL);
 	if (dst < src)
 		return (ft_memcpy(dst, src, len));
 	dest = (unsigned char *)dst;

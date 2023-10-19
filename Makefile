@@ -56,6 +56,10 @@ $(NAME):
 		ar -rcs $(NAME) $(OBJ)
 		ranlib $(NAME)
 
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BNSOBJ)
+
 bonus:
 		$(CC) -c $(CFLAGS) $(SRCS_BONUS)
 		ar -rcs $(NAME) $(BNSOBJ)
