@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 11:47:02 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/19 11:52:04 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/19 15:02:06 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,19 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new->next = NULL;
 	return (new);
 }
-
-/*
-int main(void)
-{
-	int		tab[20];
-	int		i;
-	t_list	*begin;
-
-	*tab = 0;
-	begin = ft_lstnew(tab);
-	if (begin && !begin->next && begin->content && *((int*)begin->content) == 0)
-		printf("OK\n");
-	else
-		printf("Try again.\n");
-}
-*/

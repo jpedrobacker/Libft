@@ -41,7 +41,7 @@ SRCS_BONUS =	ft_lstnew.c \
 				ft_lstdelone.c \
 				ft_lstclear.c \
 				ft_lstiter.c \
-				ft_lstmap.c
+				ft_lstmap.c \
 
 OBJ			=	$(SRCS:.c=.o)
 BNSOBJ		=	$(SRCS_BONUS:.c=.o)
@@ -58,11 +58,14 @@ $(NAME):
 
 bonus:
 		$(CC) -c $(CFLAGS) $(SRCS_BONUS)
-		ar -rcs $(NAME) $(OBJ)
+		ar -rcs $(NAME) $(BNSOBJ)
 		ranlib $(NAME)
 
 clean:
 		rm -rf $(OBJ)
+
+bclean:
+		rm -rf $(BNSOBJ)
 
 fclean:	clean
 		rm -rf $(NAME)
