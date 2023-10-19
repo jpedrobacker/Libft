@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:37:45 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 12:09:48 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/19 17:55:11 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,19 @@
 
 void	*ft_calloc(size_t nitems, size_t size)
 {
-	void	*i;
-	size_t	s;
+	char			*dst;
+	unsigned int	total;
+	unsigned int	i;
 
-	s = nitems * size;
-	i = malloc(s);
-	if (!i)
+	total = nitems * size;
+	dst = malloc(total);
+	if (!dst)
 		return (NULL);
-	else
-		ft_bzero(i, s);
-	return (i);
-}
-
-/*
-int main(void)
-{
-	int i = 0;
-	int n = 5;
-	int *ptr = (int *)ft_calloc(n, sizeof(int));
-
-	while (i < n)
+	i = 0;
+	while (total--)
 	{
-		ptr[i] = i + 1;
+		dst[i] = 0;
 		i++;
 	}
-	i = 0;
-	while (i < n)
-	{
-		printf("%d, ", ptr[i++]);
-	}
+	return ((void *)dst);
 }
-*/
