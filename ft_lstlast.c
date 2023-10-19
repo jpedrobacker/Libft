@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/19 11:47:02 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/19 11:52:04 by jbergfel         ###   ########.fr       */
+/*   Created: 2023/10/19 11:32:08 by jbergfel          #+#    #+#             */
+/*   Updated: 2023/10/19 11:51:01 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*new;
+	t_list	*temp;
 
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->next = NULL;
-	return (new);
+	temp = lst;
+	while (temp->next != NULL)
+		temp = temp->next;
+	return (temp);
 }
-
 /*
 int main(void)
 {
@@ -33,9 +30,20 @@ int main(void)
 
 	*tab = 0;
 	begin = ft_lstnew(tab);
-	if (begin && !begin->next && begin->content && *((int*)begin->content) == 0)
-		printf("OK\n");
+
+	i = 0;
+	while (++i < 10)
+	{
+		tab[i] = i;
+		ft_lstadd_front(&begin, ft_lstnew(tab + i));
+	}
+	//t_list	*tmp = begin;
+	if (*((int*)(ft_lstlast(begin)->content)) == 0)
+		printf("OK: expected list->content to be %d, got %d.\n"\
+		, 0, *((int*)(ft_lstlast(begin)->content)));
 	else
-		printf("Try again.\n");
+		printf("Try again: expected list->content to be %d, got %d.\n"\
+		, 0, *((int*)(ft_lstlast(begin)->content)));
+
 }
 */

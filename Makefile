@@ -45,7 +45,7 @@ SRCS_BONUS =	ft_lstnew.c \
 
 OBJ			=	$(SRCS:.c=.o)
 BNSOBJ		=	$(BNSRCS:.c=.o)
-CC			=	gcc
+CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 NAME 		=	libft.a
 
@@ -65,6 +65,6 @@ clean:
 		rm -rf $(OBJ)
 
 fclean:	clean
-		rm -f $(NAME)
+		rm -rf $(NAME)
 
 re:	fclean all
