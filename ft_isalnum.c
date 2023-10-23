@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:34:20 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 12:22:59 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:23:13 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,3 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-/*
-int main(void)
-{
-	printf("%d", ft_isalnum('q'));
-}
-*/

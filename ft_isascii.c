@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:34:47 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:38:05 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:22:19 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-/*
-int main(void)
-{
-	printf("%d", ft_isascii('q'));
-}
-*/

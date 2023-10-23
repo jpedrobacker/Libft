@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:35 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:38:36 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:24:00 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,3 @@ void	ft_putendl_fd(char *s, int fd)
 		ft_putchar_fd(s[i++], fd);
 	ft_putchar_fd('\n', fd);
 }
-
-/*
-int main(void)
-{
-	ft_putendl_fd("corta isso", 1);
-	ft_putendl_fd("e isso", 1);
-}
-*/

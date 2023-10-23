@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 12:36:35 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/20 11:05:07 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:24:33 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static void	ft_split_free(char **arr, size_t j)
 	free(arr);
 }
 
-static char	**split(const char *s, char c, char **arr)
+static char	**my_split(const char *s, char c, char **arr)
 {
 	size_t	wordl;
 	size_t	i;
@@ -91,26 +91,6 @@ char	**ft_split(const char *s, char c)
 	arr = (char **)malloc((count_words(s, c) + 1) * sizeof(*arr));
 	if (!arr)
 		return (NULL);
-	split(s, c, arr);
+	my_split(s, c, arr);
 	return (arr);
 }
-
-/*
-int main(void)
-{
-	char *s = "o+o+a";
-	char c = '+';
-	char **array;
-	int i = 0;
-
-	array = ft_split(s, c);
-	while (array[i])
-	{
-		printf("%s\n",array[i]);
-		i++;
-	}
-	ft_split_free(array);
-	free(array);
-	return (0);
-}
-*/

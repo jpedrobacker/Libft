@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:21 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/19 18:13:23 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:23:43 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (cdst);
 }
-
-/*
-int main (void)
-{
-	char *src = "copia essa string";
-	char dst[40];
-
-	ft_memcpy(dst, src, strlen(src) + 1);
-	printf("%s", dst);
-}
-*/

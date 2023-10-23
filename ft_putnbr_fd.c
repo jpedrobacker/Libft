@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:38 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 15:09:55 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:24:04 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + 48, fd);
 }
-
-/*
-int main(void)
-{
-	ft_putnbr_fd(-2147483648, 1);
-}
-*/

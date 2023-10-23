@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:01 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/19 18:26:00 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:25:05 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dstlen + i] = '\0';
 	return (srclen + dstlen);
 }
-
-/*
-int main(void)
-{
-	char dst[30] = "123";
-	char src[30] = "456";
-
-	ft_strlcat(dst, src, 2);
-	printf("%ld",ft_strlcat(dst, src, 2));
-}
-*/

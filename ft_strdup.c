@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:53 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:38:54 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:24:49 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ char	*ft_strdup(const char *src)
 	dst[j] = '\0';
 	return (dst);
 }
-
-/*
-int main(void)
-{
-	char    *str;
-	char    *alc;
-
-	str = "copia essa string";
-	alc = ft_strdup(str);
-	printf("original: %s\ncopia: %s", str, alc);
-}
-*/

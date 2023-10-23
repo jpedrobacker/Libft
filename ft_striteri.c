@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:56 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 15:13:09 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:24:55 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-/*
-void func(unsigned int i, char *str)
-{
-	printf("%d, %s\n", i, str);
-}
-
-int main(void)
-{
-	char str[10] = "alo.";
-	printf("%s\n", str);
-	ft_striteri(str, func);
-	printf("%s\n", str);
-	return (0);
-}
-*/

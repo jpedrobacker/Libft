@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:28 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 11:58:41 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:23:51 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (s);
 }
-
-/*
-int main(void)
-{
-	char str[50];
-	strcpy(str, "com isso daqui completa com isso");
-	ft_memset(str, '$', 5);
-	ft_putstr_fd(str, 1);
-}
-*/

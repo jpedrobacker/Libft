@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:29 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:39:30 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:26:22 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-
-/*
-int main(void)
-{
-	char str[] = "ola";
-	int i = 0;
-	while (str[i] != '\0')
-	{
-		printf("%c", ft_toupper(str[i]));
-		i++;
-	}
-	printf("\n");
-}
-*/

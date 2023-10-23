@@ -6,15 +6,13 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:43 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/19 16:56:52 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:26:28 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 

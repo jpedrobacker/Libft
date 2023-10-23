@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:20 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 12:28:12 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:25:49 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = 0;
 	return (str);
 }
-
-/*
-int main(void)
-{
-	printf("%s\n", ft_strtrim(".-.-.ola---", ".-"));
-	return (0);
-}
-*/

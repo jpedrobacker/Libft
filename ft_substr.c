@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:23 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 12:26:43 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:26:10 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,3 @@ char	*ft_substr(const char *src, unsigned int start, size_t len)
 	dst[j] = '\0';
 	return (dst);
 }
-
-/*
-int main(void)
-{
-	char src[] = "substr funcao implementacao";
-	int m = 7;
-	int n = 12;
-
-	char *dest = ft_substr(src, m, n);
-	printf("%s\n", dest);
-	return (0);
-}
-*/

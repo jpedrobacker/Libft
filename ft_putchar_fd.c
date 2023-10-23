@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:31 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:38:32 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:23:55 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-/*
-int main(void)
-{
-	ft_putchar_fd('c', 1);
-}
-*/

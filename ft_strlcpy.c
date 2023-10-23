@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:04 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/17 11:13:17 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:25:11 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (ft_strlen(src));
 }
-
-/*
-int main(void)
-{
-  char src[] = "Ola como vai você";
-  char dest[100];
-
-  printf("%ld\n",ft_strlcpy(dest, src, 4));
-}
-*/

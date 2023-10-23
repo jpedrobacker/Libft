@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:37:57 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 12:22:29 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:23:10 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,3 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
-
-/*
-int main(void)
-{
-	printf("%d", ft_isalpha('q'));
-}
-*/

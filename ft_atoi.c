@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:37:34 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 12:12:02 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:23:23 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,3 @@ int	ft_atoi(const char *str)
 	}
 	return (res * s);
 }
-
-/*
-int main(void)
-{
-  printf("%d", ft_atoi("  -42ii342"));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:15 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 10:39:16 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:25:32 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	}
 	return (0);
 }
-
-/*
-int main(void)
-{
-  char str[] = "Pegue essa string daqui";
-  char to_find[] = "essa";
-  printf("%s\n", ft_strnstr(str, to_find, 40));
-}
-*/

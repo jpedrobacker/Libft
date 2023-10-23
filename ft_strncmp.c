@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:13 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/17 14:22:07 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:25:26 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,3 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 	}
 	return (0);
 }
-
-/*
-int main(void)
-{
-  printf("%d", ft_strncmp("ABCDDASD", "ABCDasda", 6));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:24 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/19 18:15:13 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:23:47 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-/*
-int main(void)
-{
-	char dst[100] = "ola";
-	const char src[100] = " como esta";
-
-	printf("Antes memmove dest = %s, src = %s\n", dst, src);
-	ft_memmove(dst, src, 4);
-	printf("Depois memmove dest = %s, src = %s\n", dst, src);
-}
-*/

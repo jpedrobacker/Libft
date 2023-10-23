@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:18 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 12:13:22 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:23:39 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,3 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	}
 	return (0);
 }
-
-/*
-int main(void)
-{
-	char *str1 = "a";
-	char *str2 = "z";
-
-	printf("%d", ft_memcmp(str1, str2, 1));
-}
-*/

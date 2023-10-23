@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:38:59 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/16 12:27:20 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:25:01 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[lens1 + lens2] = '\0';
 	return (str);
 }
-
-/*
-int main(void)
-{
-  char *s1 = "ola";
-  char *s2 = "+";
-
-	printf("%s", ft_strjoin(s1, s2));
-}
-*/

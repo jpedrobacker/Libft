@@ -6,7 +6,7 @@
 /*   By: jbergfel <jbergfel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 10:39:18 by jbergfel          #+#    #+#             */
-/*   Updated: 2023/10/17 13:57:52 by jbergfel         ###   ########.fr       */
+/*   Updated: 2023/10/20 13:25:39 by jbergfel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,3 @@ char	*ft_strrchr(const char *str, int c)
 	}
 	return (0);
 }
-
-/*
-int main(void)
-{
-  char *str = "sd.ha.hsduha.joao";
-  printf("%s", ft_strrchr(str, '.'));
-}
-*/
